@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>Alpha-Beta Visualizer</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bundle.css">
+        <link rel='icon' href='images/favicon.ico'>
+
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Poppins', sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <nav id="navbar" class="navbar navbar-dark bg-dark p-1">
+            <div class="container-fluid">
+                <a class="navbar-brand ms-2 nav-title" href="#">Alpha-Beta Visualizer</a>
+                <div class="navbar-nav">
+                    <a class="nav-link me-2" href="https://github.com/nikk-hhil/Alpha-Beta-Visualizer" target="_blank"><img class="nav-img" src="images/github.svg" alt="GitHub logo"></a>
+                </div>
+            </div>
+        </nav>
+
+        <div id="controls" class="form-group controls-container m-3 p-4">
+            <span id = "main" style = "display: none">
+                <h2 class = "title mb-3">Visualization</h2>
+                
+                <!-- Added algorithm selection dropdown -->
+                <select id="algorithm-select" class="form-control mb-2">
+                    <option value="alphabeta">Alpha-Beta Pruning</option>
+                    <option value="minimax">Pure Minimax</option>
+                    <option value="negamax">Negamax</option>
+                </select>
+                
+                <button id = "run" class="btn btn-primary mb-1" style="width: 100%">Run</button>
+                <button id = "step" class="btn btn-primary mb-1" style="width: 100%">Step</button>
+                <button id = "reset" class="btn btn-danger mb-2" style="width: 100%">Reset</button>
+                
+                <!-- Added animation controls -->
+                <div class="animation-controls mb-3">
+                    <button id="play-pause" class="btn btn-secondary mb-1" style="width: 100%">Play</button>
+                    <div class="d-flex align-items-center">
+                        <span class="me-2">Speed:</span>
+                        <input type="range" id="speed-slider" class="form-range" min="1" max="10" value="5">
+                        <span id="speed-label" class="ms-2">5</span>
+                    </div>
+                </div>
+                
+                <!-- Added statistics display -->
+                <div id="statistics" class="mb-3">
+                    <h2 class="title mb-2">Statistics</h2>
+                    <table class="table table-sm">
+                        <tr>
+                            <td>Nodes Visited:</td>
+                            <td id="stat-nodes-visited">0</td>
+                        </tr>
+                        <tr>
+                            <td>Nodes Pruned:</td>
+                            <td id="stat-nodes-pruned">0</td>
+                        </tr>
+                        <tr>
+                            <td>Pruning Efficiency:</td>
+                            <td id="stat-efficiency">0%</td>
+                        </tr>
+                        <tr>
+                            <td>Max Depth:</td>
+                            <td id="stat-max-depth">0</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <h2 class = "title mb-3">Node Options</h2>
+                <p id = "unselectedText" class = "text">No node selected.</p>
+                <p id = "runningText" class = "text" style = "display: none">Reset visualization before editing nodes.</p>
+                <span id = "nodeOptions" style = "display: none">
+                    <span id = "static">
+                        <input id="staticValue" class="form-control mb-1" type="number" placeholder="Static Evaluation" autocomplete="off">
+                        <button id="setValue" class="btn btn-primary mb-3" style="width: 100%">Set Static Evaluation</button>
+                    </span>
+                    <button id = "addChild" class="btn btn-primary mb-1" style="width: 100%">Add Child</button>
+                    <button id = "deleteNode" class="btn btn-danger" style="width: 100%">Delete Node</button>
+                </span>
+            </span>
+            <span id = "help"></span>
+        </div>
+
+        <canvas id="canvas" class="canvas m-3 ml-0"></canvas>
+    </body>
+    <script type="module" src="js/main.js"></script>
+</html>

@@ -1,0 +1,68 @@
+/* css/controls.css */
+.controls-container {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    position: absolute;
+    width: 20em;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid #dee2e6;
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #3498db;
+}
+
+.text {
+    text-align: center;
+    color: #7f8c8d;
+}
+
+/* Buttons styling */
+.btn-primary {
+    background-color: #3498db;
+    border-color: #2980b9;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2471a3;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    border-color: #c0392b;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+    border-color: #a93226;
+}
+
+.btn-secondary {
+    background-color: #95a5a6;
+    border-color: #7f8c8d;
+}
+
+.btn-secondary:hover {
+    background-color: #7f8c8d;
+    border-color: #707b7c;
+}
+
+/* Form controls */
+.form-control:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+}
+
+/* Slider styling */
+input[type="range"] {
+    accent-color: #3498db;
+}

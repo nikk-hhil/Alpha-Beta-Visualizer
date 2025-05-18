@@ -1,0 +1,42 @@
+/* css/animation.css */
+.animation-controls {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-left: 4px solid #95a5a6;
+}
+
+#play-pause {
+    width: 100%;
+    margin-bottom: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.animation-controls .d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.animation-controls span {
+    font-size: 0.9em;
+    color: #7f8c8d;
+}
+
+#speed-slider {
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
+#speed-label {
+    font-family: monospace;
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+    color: #e74c3c;
+}

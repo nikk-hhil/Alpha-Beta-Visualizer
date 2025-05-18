@@ -1,0 +1,7 @@
+
+.canvas {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-color: #f8f9fa; /* Light background for better contrast */
+}

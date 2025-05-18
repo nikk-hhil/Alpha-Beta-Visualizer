@@ -1,0 +1,44 @@
+/* css/statistics.css */
+#statistics {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-left: 4px solid #3498db;
+}
+
+#statistics table {
+    width: 100%;
+    font-size: 0.9em;
+}
+
+#statistics td {
+    padding: 6px 5px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+#statistics td:first-child {
+    font-weight: 500;
+    width: 65%;
+    color: #2c3e50;
+}
+
+#statistics td:last-child {
+    text-align: right;
+    font-family: monospace;
+    font-weight: bold;
+    color: #3498db;
+}
+
+#stat-efficiency {
+    color: #e74c3c;
+}
+
+#statistics .title {
+    font-size: 1.2em;
+    margin-bottom: 12px;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+}
